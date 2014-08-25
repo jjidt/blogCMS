@@ -1,31 +1,43 @@
-<h1>Blog</h1>
-
-<% @posts.each do |post| %>
-  <h3><%= post.title %></h3>
-  <p><%= post.content %></p>
-  <div class='right'>
-    <a href='/posts/<%= post.id %>'>edit</a>
-    |
-    <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+<nav class='navbar navbar-default navbar-fixed-top'>
+  <div class="container"  id='top-bar'>
+    <h1>
+      <%= image_tag 'chekov.jpg', :class => 'img-circle face' %>
+      NUKLEAr WESSELS
+    </h1>
   </div>
-  <hr>
-  <div class='container'><p>Comments:</p>
-    <% post.comments.each do |comment| %>
-      <p>
-        <%= image_tag "c3po.jpeg" %>
-        <%= comment.commenter %>
-        <span class="center"><%= comment.body %></span>
-        <p><%= comment.created_at %></p>
-      </p>
-    <% end %>
+</nav>
+<div class = 'containter' id = 'posts'>
+  <% @posts.each do |post| %>
+    <h2 class='text-center'><%= post.title %></h2>
+    <p class='lead'><%= post.content %></p>
+    <div class='right'>
+      <a href='/posts/<%= post.id %>'>edit</a>
+      |
+      <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+    </div>
+    <hr>
+    <div class='container'><p>Comments:</p>
+      <% post.comments.each do |comment| %>
+        <div class='row'>
+          <div class='col-md-3'>
+            <%= image_tag 'c3po.jpeg', :class => 'commenter'%>
+            <p>Posted By:</p>
+            <p><%= comment.commenter %></p>
+            <p><%= comment.created_at %></p>
+          </div>
+          <div class='col-md-9'><%= comment.body %></div>
+        </div>
+        </p>
+      <% end %>
 
-    <form method='post' action='/comments/<%= post.id %>'>
-      <input placeholder='Name' id='name' name='comment[commenter]' />
-      <input placeholder='Comment' id='comment' name='comment[body]' />
-      <button class="btn btn-primary">ADD</button>
-    </form>
-  </div>
-  <hr>
-<% end %>
+      <form method='post' action='/comments/<%= post.id %>'>
+        <input placeholder='Name' id='name' name='comment[commenter]' />
+        <input placeholder='Comment' id='comment' name='comment[body]' />
+        <button class="btn btn-primary">ADD</button>
+      </form>
+    </div>
+    <hr>
+  <% end %>
+</div>
 
 <a href='/posts/new'>Create a new Post</a>

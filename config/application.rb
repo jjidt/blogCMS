@@ -9,5 +9,6 @@ Bundler.require(*Rails.groups)
 module Blog
   class Application < Rails::Application
     config.action_controller.permit_all_parameters = true
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
