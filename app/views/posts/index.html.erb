@@ -9,8 +9,21 @@
     <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
   </div>
   <hr>
-  <div class='container'>
-    <a href='/comments/<%= post.id %>'>Add Comment</a>
+  <div class='container'><p>Comments:</p>
+    <% post.comments.each do |comment| %>
+      <p>
+        <%= image_tag "c3po.jpeg" %>
+        <%= comment.commenter %>
+        <span class="center"><%= comment.body %></span>
+        <p><%= comment.created_at %></p>
+      </p>
+    <% end %>
+
+    <form method='post' action='/comments/<%= post.id %>'>
+      <input placeholder='Name' id='name' name='comment[commenter]' />
+      <input placeholder='Comment' id='comment' name='comment[body]' />
+      <button class="btn btn-primary">ADD</button>
+    </form>
   </div>
   <hr>
 <% end %>
