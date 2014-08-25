@@ -48,7 +48,7 @@
         </p>
       <% end %>
 
-      <form method='post' action='/comments/<%= post.id %>'>
+      <form method='post' action='/comments/<%= post.id %>' autocomplete='off'>
         <input placeholder='Name' id='name' name='comment[commenter]' />
         <input placeholder='Comment' id='comment' name='comment[body]' />
         <button class="btn btn-primary">ADD</button>
