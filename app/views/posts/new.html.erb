@@ -1,10 +1,12 @@
 <h2>Create a new blog post</h2>
 
-<form method='post' action="/posts">
+<form method='post' action="/posts" autocomplete="off">
   <label for='title'>Title</label>
-  <input id='title' name='title' />
-  <p>Body: </p>
+  <input id='title' name='post[title]' />
+  <hr>
+  <p>Content:</p>
   <p>
-    <textarea id='content' name='content'></textarea>
+    <textarea id='content' name='post[content]'></textarea>
   </p>
+  <button>Create</button>
 </form>
