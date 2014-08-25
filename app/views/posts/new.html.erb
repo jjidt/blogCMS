@@ -1,11 +1,6 @@
 <h2>Create a new blog post</h2>
 
-<% if @post.errors.any? %>
-  <% @post.errors.full_messages.each do |message| %>
-    <%= message %>
-    <br>
-  <% end %>
-<% end %>
+<%= render('layouts/error', :object => @post) %>
 
 <form method='post' action="/posts" autocomplete="off">
   <label for='title'>Title</label>

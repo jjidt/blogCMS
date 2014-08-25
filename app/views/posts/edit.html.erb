@@ -1,5 +1,7 @@
 <h2>Edit Post</h2>
 
+<%= render('layouts/error', :object => @post) %>
+
 <form method='post' action="/posts/<%= @post.id %>/" autocomplete="off">
   <input type="hidden" name="_method" value="patch" />
   <label for='title'>Title</label>
