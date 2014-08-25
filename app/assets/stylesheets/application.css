@@ -21,8 +21,27 @@
   font-style: normal;
 }
 
+#top-bar {
+  height: 100px
+}
+
+#main-header {
+  margin-top: 10px
+}
+
+.face {
+  width: 75px;
+  height: 75px;
+  border: 3px solid black
+}
+
+#create {
+  padding-top: 20px;
+  font-size: 18px
+}
+
 #posts {
-  margin-top: 120px
+  margin-top: 100px
 }
 
 #content {
@@ -31,7 +50,10 @@
 }
 
 .post-title {
-  margin-bottom: 30px
+  margin-bottom: 20px;
+  margin-left: -6px;
+  font-family: Tahoma;
+  font-weight: bold
 }
 
 .right {
@@ -42,21 +64,15 @@
   margin-left: 100px
 }
 
+.comment-section > p {
+  margin-bottom: 0
+}
+
 .commenter {
   width: 40px;
   height: 50px
 }
 
-.face {
-  width: 75px;
-  height: 75px;
-  border: 3px solid black
-}
-
-#top-bar {
-  margin-top: -20px;
-  margin-bottom: -10px;
-}
 
 h1 {
   font-family: kremlin;
