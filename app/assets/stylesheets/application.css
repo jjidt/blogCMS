@@ -30,6 +30,10 @@
   height: 300px
 }
 
+.post-title {
+  margin-bottom: 30px
+}
+
 .right {
   text-align: right
 }
