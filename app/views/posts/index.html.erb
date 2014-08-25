@@ -3,8 +3,15 @@
 <% @posts.each do |post| %>
   <h3><%= post.title %></h3>
   <p><%= post.content %></p>
-  <a href='/posts/<%= post.id %>'>edit</a>
-  <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+  <div class='right'>
+    <a href='/posts/<%= post.id %>'>edit</a>
+    |
+    <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+  </div>
+  <hr>
+  <div class='container'>
+    <a href='/comments/<%= post.id %>'>Add Comment</a>
+  </div>
   <hr>
 <% end %>
 
