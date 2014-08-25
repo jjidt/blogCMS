@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.recent
     render('/posts/index.html.erb')
@@ -20,6 +21,16 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    render('/posts/#{@post.id}')
+    render('/posts/edit.html.erb')
   end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(params[:post])
+      redirect_to('/')
+    else
+      render('/posts/edit.html.erb')
+    end
+  end
+
 end

@@ -1,0 +1,13 @@
+<h2>Edit Post</h2>
+
+<form method='post' action="/posts/<%= @post.id %>/" autocomplete="off">
+  <input type="hidden" name="_method" value="patch" />
+  <label for='title'>Title</label>
+  <input id='title' name='post[title]' value="<%= @post.title %>" />
+  <hr>
+  <p>Content:</p>
+  <p>
+    <textarea id='content' name='post[content]'><%= @post.content %></textarea>
+  </p>
+  <button>Update</button>
+</form>
