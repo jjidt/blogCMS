@@ -2,8 +2,9 @@
 
 <% @posts.each do |post| %>
   <h3><%= post.title %></h3>
-  <hr>
   <p><%= post.content %></p>
+  <a href='/posts/<%= post.id %>'>edit</a>
+  <hr>
 <% end %>
 
 <a href='/posts/new'>Create a new Post</a>

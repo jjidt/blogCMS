@@ -17,4 +17,9 @@ class PostsController < ApplicationController
       render('/posts/new.html.erb')
     end
   end
+
+  def edit
+    @post = Post.find(params[:id])
+    render('/posts/#{@post.id}')
+  end
 end
