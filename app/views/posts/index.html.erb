@@ -13,8 +13,8 @@
     </div>
   </div>
 </nav>
-<div class = 'containter' id = 'posts'>
-  <%= flash[:notice] %>
+<div id = 'posts'>
+  <span class='red'><%= flash[:notice] %></span>
   <% @posts.each do |post| %>
     <div class='container'>
       <div class='row'>

@@ -27,6 +27,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(params[:post])
+      flash[:notice] = 'post updated'
       redirect_to('/')
     else
       render('/posts/edit.html.erb')
@@ -36,6 +37,7 @@ class PostsController < ApplicationController
   def delete
     @post = Post.find(params[:id])
     @post.destroy
+    flash[:notice] = 'post deleted'
     redirect_to('/')
   end
 

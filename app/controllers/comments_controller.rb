@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = @post.comments.new(params[:comment])
     if @comment.save
+      flash[:notice] = 'comment added'
       redirect_to :back
     else
       redirect_to :back
@@ -14,7 +15,7 @@ class CommentsController < ApplicationController
   def delete
     @comment = Comment.find(params[:id])
     @comment.destroy
-    flash[:notice] = "comment deleted"
+    flash[:notice] = 'comment deleted'
     redirect_to :back
   end
 
