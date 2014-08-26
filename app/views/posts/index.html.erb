@@ -14,6 +14,7 @@
   </div>
 </nav>
 <div class = 'containter' id = 'posts'>
+  <%= flash[:notice] %>
   <% @posts.each do |post| %>
     <div class='container'>
       <div class='row'>
