@@ -6,7 +6,7 @@ Basic blog CMS created in Rails
 
 ###Demonstration
 
-[Nuklearwessels](https://herokuapp.nuklearwessels.com)
+[Nuklearwessels](http://nuklearwessels.herokuapp.com/)
 
 ###License
 
