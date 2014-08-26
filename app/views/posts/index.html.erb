@@ -35,7 +35,7 @@
     <div class='right'>
       <a href='/posts/<%= post.id %>'>edit</a>
       |
-      <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+      <a href='/posts/<%= post.id %>' data-method='delete' data-confirm='are you sure?' rel='nofollow'>delete</a>
     </div>
     <hr>
     <div class='container'><p>Comments:</p>
@@ -50,7 +50,7 @@
           <div class='col-md-9'>
             <%= comment.body %>
             <div class='right'>
-              <a href='/comments/<%= comment.id %>' data-method='delete' data-confirm='are you sure?'>delete</a>
+              <a href='/comments/<%= comment.id %>' data-method='delete' data-confirm='are you sure?' rel='nofollow'>delete</a>
             </div>
           </div>
         </div>
