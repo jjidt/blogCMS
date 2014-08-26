@@ -7,6 +7,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'pg'
 
 group :development do
   gem 'better_errors'
