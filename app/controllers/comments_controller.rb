@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
       flash[:notice] = 'comment added'
       redirect_to :back
     else
+      flash[:alert] = 'comment error: fields cannot be left blank'
       redirect_to :back
     end
   end
