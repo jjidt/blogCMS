@@ -11,4 +11,10 @@ class CommentsController < ApplicationController
     end
   end
 
+  def delete
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to :back
+  end
+
 end
