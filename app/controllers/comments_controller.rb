@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to :back
     else
-      render('/posts/index.html')
+      redirect_to :back
     end
   end
 

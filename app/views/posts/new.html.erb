@@ -4,7 +4,7 @@
 
 <form method='post' action="/posts" autocomplete="off">
   <label for='title'>Title</label>
-  <input id='title' name='post[title]' />
+  <input id='title' name='post[title]' value='<%= @post.title %>' />
   <hr>
   <p>Content:</p>
   <p>
